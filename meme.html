@@ -48,12 +48,19 @@
       var canvas = document.querySelector('canvas');
       var ctx = canvas.getContext("2d");
       // Your code here
+        
+        // Image 
+        if (image != null) {
+           ctx.drawImage(image, 0, 0, canvas.width, canvas.height);     
+        }
+        
+        //Text Attributes
         ctx.font = "36px Impact";
         ctx.textAlign = "center"; 
         ctx.fillStyle = "white";
         ctx.strokeStyle = "black";
         ctx.lineWidth = "3";
-        
+        //Write text in canvas
         if (topLine != null) {
              ctx.fillText(topLine, canvas.width / 2, 50);
              ctx.strokeText(topLine, canvas.width / 2, 50); 
@@ -63,7 +70,6 @@
             ctx.fillText(bottomLine, canvas.width / 2, 450);
             ctx.strokeText(bottomLine, canvas.width / 2, 450);    
         }
-        
     }
     
     function saveFile() {
