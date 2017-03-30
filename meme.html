@@ -53,10 +53,17 @@
         ctx.fillStyle = "white";
         ctx.strokeStyle = "black";
         ctx.lineWidth = "3";
-        ctx.fillText(topLine, canvas.width / 2, 50);
-        ctx.fillText(bottomLine, canvas.width / 2, 450);
-        ctx.strokeText(topLine, canvas.width / 2, 50); 
-        ctx.strokeText(bottomLine, canvas.width / 2, 450); 
+        
+        if (topLine != null) {
+             ctx.fillText(topLine, canvas.width / 2, 50);
+             ctx.strokeText(topLine, canvas.width / 2, 50); 
+        }
+       
+        if (topLine != null) {
+            ctx.fillText(bottomLine, canvas.width / 2, 450);
+            ctx.strokeText(bottomLine, canvas.width / 2, 450);    
+        }
+        
     }
     
     function saveFile() {
